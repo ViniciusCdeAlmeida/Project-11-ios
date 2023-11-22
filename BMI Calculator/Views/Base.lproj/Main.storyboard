@@ -130,7 +130,6 @@
                         <outlet property="heightLabel" destination="Xcz-1j-2c9" id="DbL-q3-CnP"/>
                         <outlet property="heightSliderBtn" destination="Pky-qY-oVp" id="DSL-8H-Sjf"/>
                         <outlet property="weightLabel" destination="LTF-aL-8qu" id="df0-y6-I99"/>
-                        <outlet property="weightSlider" destination="s2X-C5-Zcz" id="7Rx-DT-QnC"/>
                         <outlet property="weightSliderBtn" destination="s2X-C5-Zcz" id="CR3-sK-5d3"/>
                     </connections>
                 </viewController>
