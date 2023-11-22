@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class MainViewController: UIViewController {
+    var bmiValue : String?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -35,10 +35,16 @@ class ViewController: UIViewController {
         
         let bmi = weight / pow(height,2)
         
-        let secondVC = SecondVC()
-        secondVC.bmi = String(format: "%.1f",bmi) 
+        bmiValue = String(format: "%.1f",  bmi)
         
-        self.present(secondVC, animated: true)
+        self.performSegue(withIdentifier: "goToResult", sender:self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToResult"{
+            let destination = segue.destination as! ResultViewController
+            destination.bmiResult = bmiValue
+        }
     }
 }
 
